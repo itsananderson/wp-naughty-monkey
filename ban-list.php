@@ -1,0 +1,1 @@
+<?php $ban_list = array(); ?>
