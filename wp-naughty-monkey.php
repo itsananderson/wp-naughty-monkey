@@ -1,12 +1,13 @@
 <?php
 /*
- Plugin Name: WP Naughty Monkey
+ Plugin Name: Naughty Monkey
  Plugin URI: http://www.itsananderson.com/plugins/naughty-monkey/
  Description: Automatically bans users who try to log in using the 'admin' username.
  Version: 1.0
  Author: Will Anderson
  Author URI: http://www.itsananderson.com/
  */
+
 
 class Naughty_Monkey {
 	public static function start() {
@@ -50,7 +51,7 @@ class Naughty_Monkey {
 
 	public static function save_banned_ip_list($banned) {
 		$file = fopen(plugin_dir_path(__FILE__) . 'ban-list.php', 'w');
-		fwrite($file, '<?php $ban_list = array(\'' . implode($banned, "','") . '\'); ?>');
+		fwrite($file, '<?php $ban_list = array(\'' . implode($banned, "','") . '\');');
 		fclose($file);
 	}
 

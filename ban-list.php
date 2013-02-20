@@ -1,1 +1,1 @@
-<?php $ban_list = array(); ?>
+<?php $ban_list = array();
